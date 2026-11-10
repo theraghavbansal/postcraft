@@ -3,7 +3,7 @@ const app = express();
 app.use(express.urlencoded({extended:true}));
 const methodOverride = require("method-override");
 
-const port = 8080;
+const port = process.env.PORT || 8080;
 const path = require("path");
 const {v4:uuidv4} = require("uuid");
 
@@ -32,6 +32,10 @@ let      posts = [
     }
 ]
 
+app.get("/", (req, res) => {
+    res.redirect("/posts");
+});
+
 app.get("/posts", (req,res)=>{
   res.render("index.ejs", {posts});
 })
@@ -45,7 +49,7 @@ app.post("/posts", (req,res)=>{
    posts.push({id,username, content});
 
     // res.render("index.ejs", {posts});
-    res.redirect("http://localhost:8080/posts");
+    res.redirect("/posts");
     
 })
 
@@ -68,7 +72,7 @@ app.patch("/posts/:id", (req,res)=>{
   let newContent = req.body.content;
   let post = posts.find((p)=> id === p.id);
   post.content = newContent;
-  res.redirect("http://localhost:8080/posts");
+  res.redirect("/posts");
   console.log(post);
    
 //    res.send("Page is Working");
