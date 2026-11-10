@@ -1,6 +1,11 @@
-# RESTful Posts Application 📝
+# PostCraft 📝
 
 A full-stack CRUD web application built with **Node.js**, **Express.js**, and **EJS** demonstrating RESTful architecture principles. Users can create, view, edit, and delete posts with dynamic routing and unique identifier generation.
+
+[![Live Demo](https://img.shields.io/badge/Demo-Live_Website-success?style=for-the-badge&logo=render)](https://postcraft-l8mu.onrender.com)
+[![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+🔗 **Live Deployment:** [https://postcraft-l8mu.onrender.com](https://postcraft-l8mu.onrender.com)
 
 ---
 
@@ -63,8 +68,8 @@ REST/
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd REST
+   git clone https://github.com/theraghavbansal/postcraft.git
+   cd postcraft
    ```
 
 2. **Install dependencies:**

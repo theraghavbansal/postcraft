@@ -28,7 +28,7 @@ let      posts = [
  {
     id: uuidv4(),
     username:"Harshitt",
-    content:"I love 67"
+    content:"I love hardwork"
     }
 ]
 
@@ -75,7 +75,7 @@ app.patch("/posts/:id", (req,res)=>{
   res.redirect("/posts");
   console.log(post);
    
-//    res.send("Page is Working");
+
 })
 
 app.get("/posts/:id/edit", (req,res)=>{
@@ -89,7 +89,7 @@ app.delete("/posts/:id", (req,res)=>{
     posts = posts.filter((p)=> id !== p.id);
     res.redirect("/posts");
    
-    //  res.redirect("http://localhost:8080/posts");
+    
 })
 app.listen(port , ()=>{
     console.log("App is listening on", port);
